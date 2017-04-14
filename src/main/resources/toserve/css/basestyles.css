@@ -1,0 +1,148 @@
+@media (min-width: 1200px) {
+    .container {
+        width:90%;
+    }
+}
+
+body {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  background-color: #fdfdfd;
+}
+
+legend {
+  color : #2498CA;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.abt-font {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: 400;
+}
+
+legend {
+	font-style:normal;
+	font-weight:300
+}
+
+h2, h3, h4 { 
+ 	font-style:normal;
+	font-weight:300
+ }
+ 
+.inline-img {
+	display:inline-block;
+	vertical-align:middle
+}
+
+label.control-label[class*="span"] {
+/*
+any child element under .show-grid that has a class that CONTAINS span
+*/
+	margin-bottom:1px;
+	min-height:20px
+}
+
+label {
+	font-weight:500;
+}
+
+th {
+	font-weight:500;	
+}
+
+div.control-group input[type="text"][class*="span"],select[class*="span"] {
+    margin-bottom: 5px;
+}
+
+.input-prepend.stacked {
+	display: block;
+	margin:10px 10px 10px 0px
+}
+
+#lift__noticesContainer__ {
+	position: fixed;
+    top: 10px;
+    left: 0px;
+	width: 100%;
+	z-index: 100;
+}
+
+#lift__noticesContainer___error, #lift__noticesContainer___warning, #lift__noticesContainer___notice{
+	border: 1px solid;
+    padding:5px 15px;
+    margin: 2px 0px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+	width: 100%;
+    min-height: 50px;
+}
+
+#lift__noticesContainer___notice {
+	color: #59B200;
+	background-color: #DFFFBF;
+}
+
+#lift__noticesContainer___warning {
+	color: #8C6900;
+	background-color: #FFEFBF;
+}
+
+#lift__noticesContainer___error {
+	color: #D90000;
+	background-color:#FFBFBF;
+}
+
+#lift__noticesContainer__ #msg-header {
+	text-shadow: 0 1px 0 #FFFFFF;
+	font-size: 110%;
+}	
+.navbar-inner.navbar-thin {
+	min-height: 30px
+}
+
+.form-compressed .control-group {
+	margin-bottom: 5px;
+}
+
+.pad5 {
+	padding: 5px 4px 0px 4px;
+	margin-bottom: 5px
+}
+
+.no-caret .caret {
+	border-left: none;
+	border-top:none;
+	border-right:none;
+}
+
+thead.linear-gradient {
+	background-image: linear-gradient(to bottom, #F0F0F0, #C0C0C0);
+}
+
+thead.linear-gradient th {
+    text-align: center;
+}
+td.cell_buttons {
+	text-align:center;
+}
+
+.cico a {
+	color: inherit;
+}
+
+.panel label {
+	margin-bottom:0;
+}
+
+/* default, mobile-first styles */
+.logo .version {
+    float: left;
+}
+
+/* tablets and upwards */
+@media (min-width: 768px) {
+    .logo .version{
+        float: right;
+        margin-top:20px;
+    }
+}

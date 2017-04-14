@@ -1,0 +1,15 @@
+.keep
+*.class
+.cache
+.classpath
+.project
+.settings/
+target/
+.worksheet
+*.log
+*.sc
+.~lock.mycloud-tests.ods#
+/target/
+mystyles.css
+mycloud-tests.ods
+/target/

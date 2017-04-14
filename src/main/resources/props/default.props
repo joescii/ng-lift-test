@@ -1,0 +1,4 @@
+session.timeout=60
+ajax.timeout=6000
+ajax.retry=5
+recipe.default.name=Default
