@@ -47,11 +47,17 @@ class DeviceSnippet extends DispatchSnippet with Loggable {
     case "edit"     => edit
   }
   
+  def getWillFail(): Box[JValue] = Failure("forced failure");
+  
   def getTestData(): Box[JValue] =  {
     val data = List(TestData("a", 1), TestData("b", 2))
     val res = Full(Extraction.decompose(data))
     println(s"res $res")
     res
+  }
+  
+  def getFutureFail() : Future[Box[JValue]] = Future {
+    Failure("Future fail")
   }
   
   def getCachedTestData(): Future[Box[JValue]] =  {
@@ -71,7 +77,9 @@ class DeviceSnippet extends DispatchSnippet with Loggable {
       
       val f1: JsObjFactory = jsObjFactory()
         .defAny("getData", getTestData())
+        .defAny("getWillFail", getWillFail())
         .defFutureAny("getCachedData", getCachedTestData().la)
+        .defFutureAny("getFutureFail", getFutureFail().la)
       
       def services() = angular.module("bc.services").factory("deviceService", f1)
 
