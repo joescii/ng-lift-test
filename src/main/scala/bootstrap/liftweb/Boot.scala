@@ -27,7 +27,7 @@ import net.liftweb.http.js.JE
  * A class that's instantiated early and run.  It allows the application
  * to modify lift's environment
  */
-class Boot extends BiochargerLogMenu with Loggable {
+class Boot extends LogMenu with Loggable {
   def boot {
        
     // where to search snippet
@@ -38,7 +38,7 @@ class Boot extends BiochargerLogMenu with Loggable {
 
     //		MongoDB.defineDb(util.DefaultConnectionIdentifier, server, "bc")
 
-    MyCss.init //add css to html
+//    MyCss.init //add css to html
 
     //		FoBo.InitParam.JQuery = FoBo.JQuery1102
     //FoBo.InitParam.JQuery = FoBo.JQuery211
@@ -57,9 +57,6 @@ class Boot extends BiochargerLogMenu with Loggable {
 
     //Add CSS resources
     ResourceServer.allow {
-      case "css" :: "bdtoggle.css" :: Nil => true
-      case "css" :: "mystyles.css" :: Nil => true
-      case "css" :: "styles.css" :: Nil => true
       case "css" :: "basestyles.css" :: Nil => true
       case "js" :: "bootstrap-fileinput" :: "css" :: "fileinput.min.css" :: Nil => true
       case "js" :: "jquery-ui" :: _ => true
@@ -170,7 +167,7 @@ class Boot extends BiochargerLogMenu with Loggable {
   }
 }
 
-trait BiochargerLogMenu {  
+trait LogMenu {  
   def sitemap() =
     SiteMap(Menu("Home") / "index")
 }
