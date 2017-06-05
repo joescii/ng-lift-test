@@ -13,3 +13,6 @@ target/
 mystyles.css
 mycloud-tests.ods
 /target/
+.idea/
+*.swp
+ng-lift-test.iml
