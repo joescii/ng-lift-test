@@ -56,10 +56,8 @@ class DeviceSnippet extends DispatchSnippet with Loggable {
     res
   }
   
-  def getFutureFail() : Future[Box[JValue]] = Future {
-    Failure("Future fail")
-  }
-  
+  def getFutureFail() : Future[JValue] = Future.failed(new Exception("Future fail"))
+
   def getCachedTestData(): Future[Box[JValue]] =  {
     Future {
       val data = List(TestData("aa", 11), TestData("bb", 22))
